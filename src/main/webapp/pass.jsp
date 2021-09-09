@@ -8,14 +8,15 @@
 </head>
 <body>
 	<%! int age;
-		String agestr;
+		String agestr,name;
 	%>
 	
 	<%
 		agestr = request.getParameter("age");
+		name = request.getParameter("name");
 		age = Integer.parseInt(agestr);
 	%>
 
-	<h1>당신은 <%=age %>살이므로 홈페이지 입장이 가능합니다!</h1>
+	<h1><%=name %>님은 <%=age %>살이므로 홈페이지 입장이 가능합니다!</h1>
 </body>
 </html>

@@ -8,15 +8,16 @@
 </head>
 <body>
 	<%! int age;
-		String agestr;
+		String agestr,name;
 	%>
 	
 	<%
 		agestr = request.getParameter("age");
+		name = request.getParameter("name");
 		age = Integer.parseInt(agestr);
 	%>
 	
-	<h1>당신은 <%=age %>살이므로 미성년자는 우리 홈페이지에 들오실수 없습니다</h1>
+	<h1><%=name %>님은 <%=age %>살이므로 미성년자는 우리 홈페이지에 들오실수 없습니다</h1>
 	<a href = "requestage.html">나이가 맞지 않아요</a>
 </body>
 </html>

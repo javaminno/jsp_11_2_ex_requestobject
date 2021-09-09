@@ -8,21 +8,22 @@
 </head>
 <body>
 	<%!	int age;
-		String agestr;
+		String agestr, name;
 	%>
 	
 	<%
 		agestr = request.getParameter("age");
+		name = request.getParameter("name");
 		age = Integer.parseInt(agestr);
 		
 		if(age>=20)
 		{
-			response.sendRedirect("pass.jsp?age=" + age); //가지고온 age값을 pass.jsp에 전달
+			response.sendRedirect("pass.jsp?age=" + age + "&name=" + name); //가지고온 age값을 pass.jsp에 전달
 		}
 		
 		else
 		{
-			response.sendRedirect("ng.jsp?age=" + age);	
+			response.sendRedirect("ng.jsp?age=" + age + "&name=" + name);	
 		}
 		
 	%>
